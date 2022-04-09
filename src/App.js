@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+import {Details, Posts, Users} from "./components";
 
 const App = () => {
+    const [details, setDetails] = useState(null);
     return (
         <div>
-            Hello
+            <div>
+                <Users setDetails={setDetails}/>
+                {details && <Details details={details}/>}
+            </div>
+            <Posts/>
         </div>
     );
 };
