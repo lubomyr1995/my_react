@@ -1,4 +1,4 @@
-export const Details = ({details}) => {
+export const Details = ({details, setPostByUserId}) => {
     const {id, name, username, email, phone, website} = details
     return (
         <div>
@@ -8,6 +8,10 @@ export const Details = ({details}) => {
             <div>email: {email}</div>
             <div>phone: {phone}</div>
             <div>website: {website}</div>
+            <button onClick={() => {
+                setPostByUserId(id)
+            }}>getPosts
+            </button>
         </div>
     );
 };

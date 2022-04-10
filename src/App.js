@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
 
+import './App.css';
 import {Details, Posts, Users} from "./components";
 
 const App = () => {
     const [details, setDetails] = useState(null);
+    const [postByUserId, setPostByUserId] = useState(null);
+
     return (
         <div>
-            <div>
-                <Users setDetails={setDetails}/>
-                {details && <Details details={details}/>}
+            <div className={'flex'}>
+                <Users setDetails={setDetails} setPostByUserId={setPostByUserId}/>
+                <div>{details && <Details details={details} setPostByUserId={setPostByUserId}/>}</div>
             </div>
-            <Posts/>
+            {postByUserId && (<Posts postByUserId={postByUserId}/>)}
         </div>
     );
 };
