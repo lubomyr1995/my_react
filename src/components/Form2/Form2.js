@@ -4,7 +4,7 @@ export const Form2 = () => {
     const [user, setUser] = useState({});
 
     function getChange(e) {
-        e.preventDefault()
+        e.preventDefault();
         setUser({...user, [e.target.name]: e.target.value});
     }
 

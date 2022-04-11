@@ -7,10 +7,10 @@ const App = () => {
     const [details, setDetails] = useState(null)
     return (
         <div className={css.w500}>
-            {details && <Details item={details}/>}
-            <Users getUser={setDetails}/>
-            {/*/!*<Form1/>*!/*/}
-            {/*<Form2/>*/}
+            {/*{details && <Details item={details}/>}*/}
+            {/*<Users getUser={setDetails}/>*/}
+            {/*<Form1/>*/}
+            <Form2/>
         </div>
     );
 };
