@@ -1,0 +1,10 @@
+.button {
+    /*width: 150px;*/
+    font-size: 14px;
+    background: slategray;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: greenyellow;
+}
