@@ -1,0 +1,13 @@
+.wrapPost {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.w55 {
+    width: 55%;
+}
+
+.w40 {
+    width: 40%;
+}
