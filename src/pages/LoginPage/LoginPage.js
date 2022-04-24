@@ -1,31 +1,23 @@
+import {useRef} from "react";
 import {useAuth} from "../../hooks";
 import {useLocation, useNavigate} from "react-router-dom";
-import {useRef} from "react";
 
 const LoginPage = () => {
+    const reUser = useRef();
     const {logIn} = useAuth();
-    const {state} = useLocation();
-    const name = useRef()
     const navigate = useNavigate();
-    // console.log(pathname)
+    const {state} = useLocation();
 
-    function submit() {
-        const newUser = name.current.value
-        logIn(newUser, () => navigate(state.pathname, {replace: true}))
-
+    const login = () => {
+        const userName = reUser.current.value;
+        logIn(userName, () => navigate(state.pathname, {replace: true}))
     }
-
     return (
-        // <form onSubmit={submit}>
-        //     <div><label htmlFor="{'name'}">Name: <input name={'name'} type="text" ref={name}/></label></div>
-        //     <button>Send</button>
-        // </form>
         <div>
-            <input type="text" ref={name} placeholder={'name'}/>
-            <button onClick={submit}>log</button>
+            <input type="text" ref={reUser} placeholder={'name'}/>
+            <button onClick={login}>log</button>
         </div>
-    )
-        ;
+    );
 };
 
 export {LoginPage};

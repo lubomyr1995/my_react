@@ -12,9 +12,9 @@ const MainLayout = () => {
                 <NavLink to='/users'>USERS</NavLink>
                 <NavLink to='/posts' replace>POSTS</NavLink>
                 <NavLink to='/about'>ABOUT</NavLink>
-                {user && <h1>{user}
-                    <button onClick={() => logOut(() => navigate('/'))}>logOut</button>
-                </h1>}
+                {user && <h2>{user}
+                    <button onClick={() => logOut(() => navigate('/'))}>LogOut</button>
+                </h2>}
             </div>
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <button onClick={() => navigate(-1)}>prev</button>

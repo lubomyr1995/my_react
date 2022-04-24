@@ -1,18 +1,23 @@
 import {createContext, useState} from "react";
+import {useSearchParams} from "react-router-dom";
 
 const AuthContext = createContext(null);
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
+
     const logIn = (newUser, cb) => {
-        setUser(newUser)
+        setUser(newUser);
         cb()
     }
+
     const logOut = (cb) => {
-        setUser(null)
+        setUser(null);
         cb()
     }
+
     const value = {user, logIn, logOut}
+
     return (
         <AuthContext.Provider value={value}>
             {children}
