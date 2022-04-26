@@ -1,7 +1,11 @@
+import {Counter, Form, Users} from "./components";
+
 const App = () => {
     return (
         <div>
-            Hello
+            <Counter/>
+            <Form/>
+            <Users/>
         </div>
     );
 };
