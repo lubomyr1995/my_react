@@ -9,7 +9,7 @@ const Characters = () => {
     const [characters, setCharacters] = useState([]);
     useEffect(() => {
         characterService.getByCharacterList(state).then(({data}) => setCharacters(data))
-    }, []);
+    }, [state]);
     return (
         <div className={css.characters}>
             {characters.map(character => <Character key={character.id} character={character}/>)}
