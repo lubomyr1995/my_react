@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: black;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.header > a {
+    font-size: 24px;
+    text-decoration: none;
+    color: snow;
+}
+
+.header a[class='active'] {
+    color: red;
+}
